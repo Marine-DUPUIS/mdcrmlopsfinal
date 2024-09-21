@@ -6,7 +6,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Charger le modèle depuis un chemin local
-model_uri = "models:/RL MLOPS/Production"
+model_uri = 'runs:/a93938c195e648719c4e3a42a21565d7/modele_regression_logistique'
 model = mlflow.sklearn.load_model(model_uri)
 
 @app.route('/predict', methods=['POST'])
