@@ -6,8 +6,8 @@ import numpy as np
 app = Flask(__name__)
 
 # Charger le modèle depuis un chemin local
-model_path = 'C:\\Users\\marin\\mlops_projet_final\\model'  # Chemin complet vers ton dossier modèle local
-model = mlflow.sklearn.load_model(model_path)
+model_uri = "models:/RL MLOPS/Production"
+model = mlflow.sklearn.load_model(model_uri)
 
 @app.route('/predict', methods=['POST'])
 def predict():
